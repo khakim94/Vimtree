@@ -8,9 +8,9 @@ Plug 'joshdick/onedark.vim'
 call plug#end()
 
 syntax on 
-set background=light
-set termguicolors
-colorscheme solarized
+"set background=light
+"set termguicolors
+colorscheme default
 
 
 au GUIEnter * simalt ~x
@@ -24,7 +24,7 @@ set si
 set number
 set autoindent
 set smartindent
-cd C:\Users\Admln\Documents\CP
+cd C:\Users\qwerqwerqwer
 
 inoremap { {}<Left>
 inoremap {<CR> {<CR>}<Esc>O
@@ -41,12 +41,7 @@ inoremap ' ''<Left>
 
 augroup cpp_template
 	autocmd!
-	autocmd BufNewFile *.cpp 0r C:/Users/Admln/Documents/CP/template/template.cpp 
+	"autocmd BufNewFile *.cpp 0r C:/Users/Adasfdn/Do.cpp 
 augroup END
 
 nnoremap <F5> :w<CR>:!g++ "%:p" -o "%:p:r" && "%:p:r"<CR>
-
-augroup MyBanner
-	autocmd!
-	autocmd VimEnter * if argc() == 0 | silent! 0r ~/.vim/banner.txt | setlocal buftype=nofile bufhidden=wipe noswapfile | endif
-augroup END
